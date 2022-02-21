@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Flex } from "@chakra-ui/react";
+import { Flex, VStack } from "@chakra-ui/react";
 import { RightSection } from "../../Organisms/RightSection";
 
 interface TemplatePagePublicProps {
@@ -28,7 +28,17 @@ export const TemplatePagePublic = ({
         justify="space-between"
         align="center"
       >
-        {leftSection}
+        <VStack
+          w="full"
+          maxW="450px"
+          h="full"
+          justify="center"
+          align="flex-start"
+          spacing="8"
+        >
+          {leftSection}
+        </VStack>
+
         {rightSection}
       </Flex>
     </Flex>

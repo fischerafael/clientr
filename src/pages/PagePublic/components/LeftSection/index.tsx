@@ -2,14 +2,7 @@ import { Button, Text, VStack } from "@chakra-ui/react";
 
 export const LeftSection = () => {
   return (
-    <VStack
-      w="full"
-      maxW="container.sm"
-      h="full"
-      justify="center"
-      align="flex-start"
-      spacing="8"
-    >
+    <>
       <Text fontWeight="bold" color="pink.500" fontSize="xl">
         Clientr
       </Text>
@@ -23,6 +16,6 @@ export const LeftSection = () => {
       </Text>
 
       <Button colorScheme="pink">Acessar Conta</Button>
-    </VStack>
+    </>
   );
 };
