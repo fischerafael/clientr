@@ -1,4 +1,5 @@
-import { Button, Text, VStack } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
+import { handleNavigate } from "../../../../utils";
 
 export const LeftSection = () => {
   return (
@@ -15,7 +16,9 @@ export const LeftSection = () => {
         Gerencie seus clientes de uma maneira fácil, rápida e centralizada.
       </Text>
 
-      <Button colorScheme="pink">Acessar Conta</Button>
+      <Button colorScheme="pink" onClick={() => handleNavigate("/login")}>
+        Acessar Conta
+      </Button>
     </>
   );
 };
