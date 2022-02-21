@@ -1,5 +1,8 @@
-import { Button, Flex, Text, VStack, Image } from "@chakra-ui/react";
 import React from "react";
+import { Flex } from "@chakra-ui/react";
+
+import { LeftSection } from "./components/LeftSection";
+import { RightSection } from "./components/RightSection";
 
 export const PagePublic = () => {
   return (
@@ -23,40 +26,5 @@ export const PagePublic = () => {
         <RightSection />
       </Flex>
     </Flex>
-  );
-};
-
-const RightSection = () => {
-  return (
-    <VStack maxW="container.sm">
-      <Image objectFit="contain" src="/hero-image.svg" />
-    </VStack>
-  );
-};
-
-const LeftSection = () => {
-  return (
-    <VStack
-      w="full"
-      maxW="container.sm"
-      h="full"
-      justify="center"
-      align="flex-start"
-      spacing="8"
-    >
-      <Text fontWeight="bold" color="pink.500" fontSize="xl">
-        Clientr
-      </Text>
-
-      <Text fontSize="6xl" fontWeight="bold" lineHeight="1">
-        Seu sistema de gerenciamento de clientes na nuvem.
-      </Text>
-
-      <Text fontSize="lg">
-        Gerencie seus clientes de uma maneira fácil, rápida e centralizada.
-      </Text>
-
-      <Button colorScheme="pink">Acessar Conta</Button>
-    </VStack>
   );
 };
