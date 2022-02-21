@@ -1,7 +1,8 @@
 import React from "react";
+import { PagePublic } from "../src/pages/PagePublic";
 
 const index = () => {
-  return <div>pagina inicial</div>;
+  return <PagePublic />;
 };
 
 export default index;
