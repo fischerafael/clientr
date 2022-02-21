@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { Flex } from "@chakra-ui/react";
-import { RightSection } from "../../../pages/PagePublic/components/RightSection";
+import { RightSection } from "../../Organisms/RightSection";
 
 interface TemplatePagePublicProps {
   leftSection: ReactNode;
