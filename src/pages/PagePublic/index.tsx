@@ -20,11 +20,17 @@ export const PagePublic = () => {
         align="center"
       >
         <LeftSection />
-        <VStack maxW="container.sm">
-          <Image objectFit="contain" src="/hero-image.svg" />
-        </VStack>
+        <RightSection />
       </Flex>
     </Flex>
+  );
+};
+
+const RightSection = () => {
+  return (
+    <VStack maxW="container.sm">
+      <Image objectFit="contain" src="/hero-image.svg" />
+    </VStack>
   );
 };
 
