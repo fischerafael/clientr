@@ -17,6 +17,7 @@ export const PagePublicCreateAccount = () => {
           <Text>Crie sua conta</Text>
 
           <Input bg="white" placeholder="Nome" />
+          <Input bg="white" placeholder="Sobrenome" />
           <Input bg="white" placeholder="Email" />
 
           <Button alignSelf="flex-end" colorScheme="pink">
@@ -24,7 +25,7 @@ export const PagePublicCreateAccount = () => {
           </Button>
 
           <HStack w="full" justify="space-between">
-            <NextLink href="/create-account" label="Criar Conta" />
+            <NextLink href="/login" label="Já possuo uma conta" />
             <NextLink href="/" label="Voltar" />
           </HStack>
         </VStack>
