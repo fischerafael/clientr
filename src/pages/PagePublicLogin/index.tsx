@@ -14,9 +14,10 @@ export const PagePublicLogin = () => {
             Login
           </Text>
 
-          <Text>Insira seu email para se conectar</Text>
-
-          <Input bg="white" placeholder="Email" />
+          <VStack w="full" align="flex-start">
+            <Text>Insira seu email para se conectar</Text>
+            <Input bg="white" placeholder="Email" />
+          </VStack>
 
           <Button alignSelf="flex-end" colorScheme="pink">
             Log In

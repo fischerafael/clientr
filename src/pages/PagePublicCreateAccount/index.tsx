@@ -14,11 +14,12 @@ export const PagePublicCreateAccount = () => {
             Criar Conta
           </Text>
 
-          <Text>Crie sua conta</Text>
-
-          <Input bg="white" placeholder="Nome" />
-          <Input bg="white" placeholder="Sobrenome" />
-          <Input bg="white" placeholder="Email" />
+          <VStack w="full" align="flex-start">
+            <Text>Insira seus dados e crie sua conta agora mesmo.</Text>
+            <Input bg="white" placeholder="Nome" />
+            <Input bg="white" placeholder="Sobrenome" />
+            <Input bg="white" placeholder="Email" />
+          </VStack>
 
           <Button alignSelf="flex-end" colorScheme="pink">
             Criar Conta
