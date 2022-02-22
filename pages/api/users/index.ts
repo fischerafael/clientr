@@ -13,13 +13,28 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  await db();
+  const { body, method } = req;
 
-  const { body } = req;
+  if (method === "POST") {
+    try {
+      const { email, firstName, lastName } = body as ICreateUserBody;
 
-  const { email, firstName, lastName } = body as ICreateUserBody;
+      await db();
 
-  const newUser = await User.create({ email, firstName, lastName });
+      const hasUser = await User.findOne({ email: email });
 
-  res.status(200).json({ newUser });
+      if (hasUser) throw new Error("User already exists");
+
+      const newUser = await User.create({ email, firstName, lastName });
+
+      res.status(200).json({ data: newUser, error: null });
+    } catch (e: any) {
+      res.status(400).json({
+        data: null,
+        error: e.message,
+      });
+    }
+  }
+
+  return res.status(500).json("Method not accepted");
 }
