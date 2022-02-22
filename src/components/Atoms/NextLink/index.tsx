@@ -10,7 +10,9 @@ interface NextLinkProps {
 export const NextLink = ({ href, label }: NextLinkProps) => {
   return (
     <Link href={href}>
-      <Text as="a">{label}</Text>
+      <Text _hover={{ color: "pink.500", cursor: "pointer" }} as="a">
+        {label}
+      </Text>
     </Link>
   );
 };
