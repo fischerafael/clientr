@@ -8,7 +8,7 @@ export const LeftSection = () => {
         Clientr
       </Text>
 
-      <Text fontSize="6xl" fontWeight="bold" lineHeight="1">
+      <Text fontSize="5xl" fontWeight="bold" lineHeight="1">
         Seu sistema de gerenciamento de clientes na nuvem.
       </Text>
 

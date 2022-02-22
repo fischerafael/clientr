@@ -30,7 +30,7 @@ export const TemplatePagePublic = ({
       >
         <VStack
           w="full"
-          maxW="450px"
+          maxW="350px"
           h="full"
           justify="center"
           align="flex-start"
