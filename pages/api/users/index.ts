@@ -3,6 +3,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { db } from "../../../src/database";
 import { User } from "../../../src/database/Models/User";
 
+const apiKey = process.env.API_KEY;
+
 interface ICreateUserBody {
   email: string;
   firstName: string;
@@ -13,10 +15,14 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { body, method, query } = req;
+  const { body, method, query, headers } = req;
 
   if (method === "POST") {
     try {
+      const { api_key } = headers;
+      if (!api_key) throw new Error("No API Key provided");
+      if (api_key !== apiKey) throw new Error("Invalid API Key");
+
       const { email, firstName, lastName } = body as ICreateUserBody;
 
       await db();
