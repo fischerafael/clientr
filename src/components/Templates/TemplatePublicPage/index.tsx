@@ -16,6 +16,7 @@ export const TemplatePagePublic = ({
       w="full"
       h="100vh"
       bg="purple.50"
+      bgGradient="linear(to-t, purple.50, pink.50)"
       px="8"
       fontFamily="sans-serif"
       color="pink.900"
